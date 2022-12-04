@@ -1,0 +1,240 @@
+<!doctype html>
+<!--动态码流背景 -->
+<script type="text/javascript" src="https://blog-static.cnblogs.com/files/Steven-Tim/hk01.js" ></script>
+<!-- 动态断点式图 -->
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="https://blog-static.cnblogs.com/files/xiaolubin/canvas-nest.js"></script>
+<!-- 弹窗代码开始 blog.bin00.com -->
+<!-- 点击时出现小心心 -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+var a_idx = 0;jQuery(document).ready(function($) {$("body").click(function(e) {var a = new Array("never gonna give you up", "never gonna let you down", "never gonna run around","and desert you", "never gonna make you cry", "never gonna say goodbye", "never gonna tell a lie","and hurt you", "哼", "哼", "啊啊啊啊啊", "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊");var $i = $("<span/>").text(a[a_idx]);
+a_idx = (a_idx + 1) % a.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 10,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#ff6651"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},1500,function() {$i.remove();});});});
+</script>
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<canvas id="c"></canvas>
+
+<html>
+	<head>
+		<link rel="shortcut icon" href="https://ts1.cn.mm.bing.net/th?id=ODLS.85d26b55-e126-4f8e-91d2-d8789c29dede&w=16&h=16&o=6&pid=1.2">
+		<title>狙神の软件</title>
+  </head>
+		<style>
+			@font-face {
+				font-family: 测试字体;
+				src: url("./things/冬青黑体W3.otf");
+			}
+	
+			body {
+				font-family: 测试字体;
+			}
+		</style>
+   <style type="text/css">
+	      #neon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #031628;
+      width: 7%;
+      height: 5%;
+      }
+  
+    .btn {
+      border: 1px solid;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 10px 20px;
+      font-weight: 300;
+    }
+
+    .one {
+      color: #4cc9f0;
+    }
+
+    .two {
+      color: #f038ff;
+    }
+
+    .three {
+      color: #b9e769;
+    }
+
+    .btn:hover {
+      color: white;
+      border: 0;
+    }
+
+    .one:hover {
+      background-color: #4cc9f0;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(76, 201, 240, 1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(76, 201, 240, 1);
+      box-shadow: 10px 10px 99px 6px rgba(76, 201, 240, 1);
+      transition: all ease-in 0.5s;
+	cursor:url('./things/dp.cur'),auto;
+    }
+
+    .two:hover {
+      background-color: #f038ff;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+      box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+      transition: all ease-in 0.5s;
+    }
+
+    .three:hover {
+      background-color: #b9e769;
+      -webkit-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      -moz-box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      box-shadow: 10px 10px 99px 6px rgba(185, 231, 105, 1);
+      transition: all ease-in 0.5s;
+    }
+  </style>
+ <style>
+	a{
+	text-decoration: none;
+	}
+	body{
+
+	cursor:url('./things/正常选择.cur'),auto;
+
+	}
+	#c{
+    position: fixed; 
+    top:0; 
+    left:0; 
+    z-index:-1; 
+    opacity:0.8;
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    }
+    #div_digg1 {
+    padding: 5px;
+    position: fixed;
+    _position: absolute;
+    z-index: 1000;
+    bottom: 5%;
+    left: 3.5%;
+    _left: 15px;
+    border: 0;
+    }
+    body {
+    color: #000;
+    background-color: #e6e6e6;
+    font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    min-height: 101%;
+    }
+    #home {
+    border-radius: 18px;
+    margin: 0 auto;
+    width: 80%;
+    min-width: 750px;
+    background-color: #fff;
+    background-image: url(//images.cnblogs.com/cnblogs_com/xiaolubin/1480308/o_322741.jpg);
+    background-attachment: fixed;
+    padding: 30px;
+    margin-top:50px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+    opacity: 0.9;
+    }
+    #sideBar { 
+    font-size: 12px;
+    border-radius: 18px;
+    margin: 0 auto;
+    background-color: #fff;
+    background-attachment: fixed;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+    opacity: 0.7;
+    }
+	</style>
+    <style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+	</style> 
+	<script>document.addEventListener('visibilitychange',function(){if(document.visibilityState=='hidden'){normal_title=document.title;document.title='give me up :(';}else{document.title=normal_title;}});</script>	
+	</head>
+
+	<body bgcolor="#BEE7E9" body background="./things/OIP-C.jpg" style=" background-repeat:no-repeat ;z-index:5;background-size:100% 100%;background-position: center;background-attachment: fixed;"">	
+    <audio id="audio" src="./things/ysxb.mp3"></audio>
+    <script>
+        //单个网页实现单击屏幕发出声音
+        function playSound(){
+            var audio=document.getElementById("audio");
+            if(audio.paused) {  //如果音频是暂停状态
+                audio.load;     //加载音频文件
+                audio.play();	//播放
+            }else {             //否则，也就是说音频是播放状态
+                audio.pause()
+                audio.currentTime = 0;
+                audio.play();
+            }
+        }
+        //调用
+        window.onclick=function () {
+            playSound();
+        }
+    </script>
+		<font size=5 face="测试字体" style="color:#19CAAD">
+		<center>
+		<h3> 看到下载按钮了吗？</h3><br>
+		<a href="javascript:;" onclick="window.location.href='https://hexo-4gjf2n2o52cbb2b0-1313081808.ap-shanghai.app.tcloudbase.com/'"><div id="neon-btn" style='width:7%;'><button class="btn one">传送门</button></div></a><br>
+<a href="./appjushen.exe" onclick="window.location.href='abc.html'" ><div id="neon-btn" style='width:7%;'><button class="btn two"></button>download</button></div><br></a>
+<a href="javascript:;" onclick="window.location.href='https://www.bilibili.com/video/BV1GJ411x7h7'" ><div id="neon-btn" style='width:7%;'><button class="btn three"></button>色色</button></a></div><br>
+<a href="javascript:;" title="臭死了(恼"><div id="neon-btn" style='width:7%;'><button class="btn three">别点我 :)</button></div></a><br>
+		正文在下面<br>
+		</font>
+		</center>
+		<font size=6 face="测试字体" style="color:#A0EEE1">
+			<br>
+			<h2 name="t1">1.说明</h2><br>
+			本软件为纯整活软件,任何 损 失 与作者无关<br>
+			可能包含诈骗：）<br>
+			下载的exe为安装程序<br> 
+		</font>
+		
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+	</body>
+<!-- 音乐播放器的位置 -->
+<div id="div_digg1" align="center"><p id="bfq" ></p></div>
+
+<!-- 看板娘 -->
+<script src="https://l2dwidget.js.org//lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+L2Dwidget
+.on('*', (name) => {
+console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+})
+.init({
+dialog: {
+enable: true,
+script: {
+'every idle 10s': '$hitokoto$',
+'hover .star': '来，让我看看',
+'tap body': '杰哥不要啦',
+'tap face': '杰哥你干嘛啊'
+}
+},
+"model": {
+jsonPath: "https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json",
+"scale": 1
+},
+"display": {
+"position": "right", //看板娘的表现位置
+"width": 170, //小萝莉的宽度
+"height": 300, //小萝莉的高度
+"hOffset": 0,
+"vOffset": -20
+},
+"mobile": {
+"show": true,
+"scale": 0.5
+},
+"react": {
+"opacityDefault": 0.7,
+"opacityOnHover": 0.2
+}
+});
+</script>
+</html>
